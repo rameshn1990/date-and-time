@@ -1,13 +1,9 @@
-<html>
-<head>
-<title>Hello World!</title>
-</head>
-<body>
-	<h1>Hello World this is Ramesh Nandhyala!</h1>
-	<p>
-		It is now
-		<%= new java.util.Date() %></p>
-	<p>
-		You are coming from 
-		<%= request.getRemoteAddr()  %></p>
-</body>
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;    
+public class CurrentDateTimeExample1 {    
+  public static void main(String[] args) {    
+   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+   LocalDateTime now = LocalDateTime.now();  
+   System.out.println(dtf.format(now));  
+  }    
+}    
